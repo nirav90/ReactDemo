@@ -1,11 +1,12 @@
 import React from "react";
+import "../styles.css";
 
 const VideoListItem = video => {
   console.log(video);
-
+  const onVideoSelect = video.onVideoSelect;
   const imageUrl = video.video.snippet.thumbnails.default.url;
   return (
-    <li className="list-group-item">
+    <li onClick={() => onVideoSelect(video.video)} className="list-group-item">
       <div className="video-list media">
         <div className="media-left">
           <img className="media-object" src={imageUrl} />

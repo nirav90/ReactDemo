@@ -1,8 +1,9 @@
 import React from "react";
+import "../styles.css";
 
 const videoDetail = video => {
   console.log("DDD" + video.video);
-  if (video.video !== undefined) {
+  if (video.video != null) {
     const videoId = video.video.id.videoId;
     const url = `https://www.youtube.com/embed/${videoId}`;
     return (
