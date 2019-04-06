@@ -1,6 +1,5 @@
 import React from "react";
 import VideoListItem from "./videolistitem";
-import "../styles.css";
 
 const VideoList = props => {
   const videoItem = props.videos.map(video => {
@@ -13,7 +12,7 @@ const VideoList = props => {
     );
   });
 
-  return <ul className="col-md-12 list-group">{videoItem}</ul>;
+  return <ul className="col-md-4 list-group">{videoItem}</ul>;
 };
 
 export default VideoList;
